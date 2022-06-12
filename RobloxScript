@@ -1,0 +1,286 @@
+--Lobby
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Horny-Hub 🍑"; --must be string
+	Text = "Loading Hub..."; --must be string
+	Icon = ""; --optional
+	Duration = 2; -- defaults to 5 secs if no duration is set
+})
+
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.StatusGui.GameInfo.Text = "Welcome To Horny Hub! 🍑"
+wait(3.4)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Horny-Hub 🍑"; --must be string
+	Text = "Successfully Loaded!"; --must be string
+	Icon = ""; --optional
+	Duration = 4.5; -- defaults to 5 secs if no duration is set
+})
+
+wait(0.2)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Horny-Hub 🍑"; --must be string
+	Text = "Version: 1.0.1"; --must be string
+	Icon = ""; --optional
+	Duration = 4.5; -- defaults to 5 secs if no duration is set
+})
+
+if game.PlaceId == 8690998110 or 8999652322 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Horny-Hub 🍑 Gorilla Tag Professional", "DarkTheme")
+
+local Tab = Window:NewTab("Home")
+local Tab2 = Window:NewTab("Main")
+local Tab3 = Window:NewTab("Gui")
+
+local SectionMainQS = Tab2:NewSection("Main | Quick Settings")
+local SectionMainVC = Tab2:NewSection("Main | Value Changer")
+local SectionMainLP = Tab2:NewSection("Main | Local Player")
+local SectionMainMM = Tab2:NewSection("Main | Mod Menu")
+local SectionMainGM = Tab2:NewSection("Main | Game Modes")
+local SectionGui = Tab3:NewSection("Gui | Toggle Gui")
+
+--settings
+
+SectionMainQS:NewSlider("FOV Player", "FOV Changer", 120, 80, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    workspace.CurrentCamera.FieldOfView = s
+end)
+
+--values
+
+SectionMainVC:NewSlider("Wins Value", "This Was Patched And Doesnt Work", 10000, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.leaderstats.Wins.Value = s
+end)
+
+SectionMainVC:NewSlider("Rocks Value", "This Was Patched And Doesnt Work", 100001, 150, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.leaderstats["Shiny Rocks"].Value = s
+end)
+
+SectionMainLP:NewSlider("Walk Speed", "SliderInfo", 500, 32, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+SectionMainLP:NewSlider("Jump Power", "SliderInfo", 500, 62, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+SectionMainMM:NewButton("No Tag Freeze", "So When You Get Tagged Youre Walkspeed wont change", function()
+    while true do
+        if game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 5 then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+        end
+wait(0)
+    end
+    wait(0)
+    while true do
+        if game.Players.LocalPlayer.Character.Humanoid.JumpPower == 5 then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 62
+        end
+        end
+end)
+
+SectionMainMM:NewButton("TP Gun", "", function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "TP Gun"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+SectionMainMM:NewButton("Long Arms", "", function()
+game.Players.LocalPlayer.Character["Left Arm"].Size = 1, 5, 1
+wait(0)
+game.Players.LocalPlayer.Character["Right Arm"].Size = 1, 5, 1
+end)
+SectionMainMM:NewButton("Toggle Beacon", "", function()
+
+
+local lplr = game.Players.LocalPlayer
+local camera = game:GetService("Workspace").CurrentCamera
+local CurrentCamera = workspace.CurrentCamera
+local worldToViewportPoint = CurrentCamera.worldToViewportPoint
+
+local HeadOff = Vector3.new(0, 0.5, 0)
+local LegOff = Vector3.new(0,3,0)
+
+for i,v in pairs(game.Players:GetChildren()) do
+    local BoxOutline = Drawing.new("Square")
+    BoxOutline.Visible = false
+    BoxOutline.Color = Color3.new(0,0,0)
+    BoxOutline.Thickness = 3
+    BoxOutline.Transparency = 1
+    BoxOutline.Filled = false
+
+    local Box = Drawing.new("Square")
+    Box.Visible = false
+    Box.Color = Color3.new(0,0,255)
+    Box.Thickness = 2
+    Box.Transparency = 1
+    Box.Filled = false
+
+    function boxesp()
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
+                local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+
+                local RootPart = v.Character.HumanoidRootPart
+                local Head = v.Character.Head
+                local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                if onScreen then
+                    BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+                    BoxOutline.Visible = true
+
+                    Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                    Box.Visible = true
+
+                    if v.TeamColor == lplr.TeamColor then
+                        BoxOutline.Visible = false
+                        Box.Visible = false
+                    else
+                        BoxOutline.Visible = true
+                        Box.Visible = true
+                    end
+
+                else
+                    BoxOutline.Visible = false
+                    Box.Visible = false
+                end
+            else
+                BoxOutline.Visible = false
+                Box.Visible = false
+            end
+        end)
+    end
+    coroutine.wrap(boxesp)()
+end
+
+game.Players.PlayerAdded:Connect(function(v)
+    local BoxOutline = Drawing.new("Square")
+    BoxOutline.Visible = false
+    BoxOutline.Color = Color3.new(0,0,255)
+    BoxOutline.Thickness = 2
+    BoxOutline.Transparency = 1
+    BoxOutline.Filled = false
+
+    local Box = Drawing.new("Square")
+    Box.Visible = false
+    Box.Color = Color3.new(0,0,255)
+    Box.Thickness = 1
+    Box.Transparency = 1
+    Box.Filled = false
+
+    function boxesp()
+        game:GetService("RunService").RenderStepped:Connect(function()
+            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v ~= lplr and v.Character.Humanoid.Health > 0 then
+                local Vector, onScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+
+                local RootPart = v.Character.HumanoidRootPart
+                local Head = v.Character.Head
+                local RootPosition, RootVis = worldToViewportPoint(CurrentCamera, RootPart.Position)
+                local HeadPosition = worldToViewportPoint(CurrentCamera, Head.Position + HeadOff)
+                local LegPosition = worldToViewportPoint(CurrentCamera, RootPart.Position - LegOff)
+
+                if onScreen then
+                    BoxOutline.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                    BoxOutline.Position = Vector2.new(RootPosition.X - BoxOutline.Size.X / 2, RootPosition.Y - BoxOutline.Size.Y / 2)
+                    BoxOutline.Visible = true
+
+                    Box.Size = Vector2.new(1000 / RootPosition.Z, HeadPosition.Y - LegPosition.Y)
+                    Box.Position = Vector2.new(RootPosition.X - Box.Size.X / 2, RootPosition.Y - Box.Size.Y / 2)
+                    Box.Visible = true
+
+                    if v.TeamColor == lplr.TeamColor then
+                        BoxOutline.Visible = false
+                        Box.Visible = false
+                    else
+                        BoxOutline.Visible = true
+                        Box.Visible = true
+                    end
+
+                else
+                    BoxOutline.Visible = false
+                    Box.Visible = false
+                end
+            else
+                BoxOutline.Visible = false
+                Box.Visible = false
+            end
+        end)
+    end
+    coroutine.wrap(boxesp)()
+end)
+end)
+SectionMainMM:NewButton("Scary Monke", "", function()
+game.Players.LocalPlayer.Character.MonkeFace:Destroy()
+end)
+SectionGui:NewKeybind("Toggle UI", "Open/Closes The Gui", Enum.KeyCode.X, function()
+	Library:ToggleUI()
+end)
+
+SectionMainGM:NewButton("Remove Lava Brick", "If Lava Mode Is Selected. You Cannot Die", function()
+while true do
+    game.workspace.Lava:Destroy()
+    wait(0.1)
+    end
+end)
+
+-- else
+
+
+wait(7)
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Horny-Hub 🍑"; --must be string
+	Text = "Not Playing Current Game ID.        Error Code: 151"; --must be string
+	Icon = ""; --optional
+	Duration = 7; -- defaults to 5 secs if no duration is set
+})
+end
+
+--dont be a goddam skid ididot
